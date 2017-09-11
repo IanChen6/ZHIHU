@@ -47,21 +47,22 @@ def get_captcha():
         im.ckose()
     except:
         pass
-
+    captcha=input("input captcha/n")
+    return captcha
 
 def is_login():
     #通过个人中心状态码来判断是否登录状态
-    inbox_url="https://www.zhihu.com/settings/profile"
+    inbox_url="https://www.zhihu.com/notifications"
     response=session.get(inbox_url,headers=header,allow_redirects=False)
     if response.status_code==200:
         print("已登录")
+        return True
     else:
         print("未登录")
         return False
-    pass
 
-    captcha=input("impute captcha:\n")
-    return captcha
+
+
 
 def get_xsrf():
     url = "https://www.zhihu.com/"
@@ -73,7 +74,7 @@ def get_xsrf():
     # match_obj = re.match('.*name="_xsrf" value="(.*?)".*', response.text, re.DOTALL)
     match_obj = re.findall('.*name="_xsrf" value="(.*?)".*', response.text)
     if match_obj:
-        print(match_obj[1])
+        # print(match_obj[1])
         return (match_obj[1])
 
     else:
@@ -104,7 +105,7 @@ def zhihu_login(account, password):
                 "password": password,
                 "phone_num": account
             }
-    response_text = session.post(post_url, data=post_data, headers=header)
+    response_text = session.post(post_url, data=post_data, headers=header,timeout=100)
     session.cookies.save()
 
 
@@ -113,7 +114,13 @@ def zhihu_login(account, password):
 
 
 #
-zhihu_login("18665351170", "welcome1993")
+# account=input("input your account:")
+# pw=input("input your password")
+# zhihu_login(account, pw)
 # # get_index()
 # is_login()
+if not is_login():
+    account = input("input your account:")
+    pw = input("input your password")
+    zhihu_login(account, pw)
 # get_captcha()
