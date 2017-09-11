@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fd4258e-664b-4e00-bce1-9980a365c2a0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zhihu_scrawling/captcha.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zhihu_scrawling/cookies.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ZHIHU.iml" afterPath="$PROJECT_DIR$/.idea/ZHIHU.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ss.py" afterPath="$PROJECT_DIR$/ss.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhihu_scrawling/zhihu_requests.py" afterPath="$PROJECT_DIR$/zhihu_scrawling/zhihu_requests.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -359,6 +353,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504182699944</updated>
     </task>
+    <task id="LOCAL-00001" summary="using captcha">
+      <created>1505109958345</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505109958345</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -392,6 +394,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="using captcha" />
+    <option name="LAST_COMMIT_MESSAGE" value="using captcha" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
