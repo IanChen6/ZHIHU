@@ -34,7 +34,7 @@ def get_captcha():
     import time
     t=str(int(time.time()*1000))#https://www.zhihu.com/captcha.gif?r=1505053437845&type=login&，获取图片验证码的r参数
     captcha_url="https://www.zhihu.com/captcha.gif?r={0}&type=login&".format(t)
-    t=session.get(captcha_url,headers=header)
+    t=session.get(captcha_url,headers=header)#必须用session，才能保证在一次连接内完成，匹配成功
     #保存该图片文件
     with open("captcha.jpg","wb") as f:
         f.write(t.content)
